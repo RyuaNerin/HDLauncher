@@ -44,6 +44,7 @@ namespace HDLauncher
         public const string CHOCOBO_GM_HOST = "gm-live2.ff14.co.kr";
 
         public const string FFXIV_PROGRAM_PATH = @"game\ffxiv.exe";
+        public const string FFXIV_PROGRAM_PATH_DX11 = @"game\ffxiv_dx11.exe";
         public const string COMMAND_LINE = @"DEV.LobbyHost01={0} DEV.LobbyPort01={1} DEV.GMServerHost={2} DEV.TestSID={3} SYS.resetConfig={4}";
 
         public const string UPDATE_BASE_URL = @"http://hdlauncher.devunt.kr";

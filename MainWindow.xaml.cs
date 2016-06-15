@@ -277,7 +277,7 @@ namespace HDLauncher
                     string token = tokenMatch.Groups[1].Value;
                     string commandLine = string.Format(Constants.COMMAND_LINE, lobbyHost, Constants.LOBBY_TCP_PORT, gmHost, token, Constants.RESET_CONFIG);
 
-                    string ffxivPath = Path.Combine(Settings.FFXIVPath, Constants.FFXIV_PROGRAM_PATH);
+                    string ffxivPath = Path.Combine(Settings.FFXIVPath, !Settings.DX11 ? Constants.FFXIV_PROGRAM_PATH : Constants.FFXIV_PROGRAM_PATH_DX11);
 
                     if (dryRun)
                     {

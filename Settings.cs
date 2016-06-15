@@ -16,6 +16,7 @@ namespace HDLauncher
         public static DataCenters DataCenter { get; set; } = DataCenters.Moogle;
         public static bool SavePassword { get; set; } = false;
         public static bool RunAsAdministrator { get; set; } = false;
+        public static bool DX11 { get; set; } = false;
 
         public static string Password {
             get
@@ -64,6 +65,7 @@ namespace HDLauncher
                 DataCenter = (iniFile.ReadValue("preferences", "datacenter") == "c") ? DataCenters.Chocobo : DataCenters.Moogle;
                 SavePassword = iniFile.ReadValue("preferences", "savepassword") == "1";
                 RunAsAdministrator = iniFile.ReadValue("preferences", "runasadministrator") == "1";
+                DX11 = iniFile.ReadValue("preferences", "dx11") == "1";
             }
         }
 
@@ -75,6 +77,7 @@ namespace HDLauncher
             iniFile.WriteValue("preferences", "datacenter", (DataCenter == DataCenters.Chocobo) ? "c" : "m");
             iniFile.WriteValue("preferences", "savepassword", SavePassword ? "1" : "0");
             iniFile.WriteValue("preferences", "runasadministrator", RunAsAdministrator ? "1" : "0");
+            iniFile.WriteValue("preferences", "dx11", DX11 ? "1" : "0");
         }
     }
 }

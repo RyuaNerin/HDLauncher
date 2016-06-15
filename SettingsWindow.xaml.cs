@@ -20,6 +20,7 @@ namespace HDLauncher
             Version.Text = "v" + Constants.VERSION;
             InstallPath.Text = Settings.FFXIVPath;
             RunAsAdministrator.IsChecked = Settings.RunAsAdministrator;
+            Dx11.IsChecked = Settings.DX11;
         }
 
         private void InstallPathBtn_Click(object sender, RoutedEventArgs e)
@@ -39,6 +40,7 @@ namespace HDLauncher
         {
             Settings.FFXIVPath = InstallPath.Text;
             Settings.RunAsAdministrator = RunAsAdministrator.IsChecked == true;
+            Settings.DX11 = Dx11.IsChecked == true;
             Settings.Save();
         }
     }

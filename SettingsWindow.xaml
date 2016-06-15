@@ -26,7 +26,7 @@
         
         <StackPanel Grid.Row="1" Margin="10">
             <Label Content="파이널판타지14 설치 경로"/>
-            <Grid Margin="0,0,0,10">
+            <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
@@ -34,7 +34,8 @@
                 <TextBox x:Name="InstallPath" Margin="0,0,5,0" />
                 <Button x:Name="InstallPathBtn" Content="..." FontSize="10" Click="InstallPathBtn_Click" Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" Grid.Column="1"/>
             </Grid>
-            <CheckBox x:Name="RunAsAdministrator" IsTabStop="False" Content="관리자 권한으로 실행" ToolTip="엑스박스 컨트롤러 진동 알림 등에 필요합니다." HorizontalAlignment="Left"/>
+            <CheckBox x:Name="RunAsAdministrator" IsTabStop="False" Content="관리자 권한으로 실행" ToolTip="엑스박스 컨트롤러 진동 알림 등에 필요합니다." HorizontalAlignment="Left" Margin="0,10,0,10"/>
+            <CheckBox x:Name="Dx11" IsTabStop="False" Content="DirectX 11 사용" ToolTip="DirectX 11모드를 지원하지 않는 PC이거나, 성능을 향상시키려면 체크옵션을 해제해 주세요. " HorizontalAlignment="Left"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2">
