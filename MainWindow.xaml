@@ -49,11 +49,6 @@
             <StackPanel VerticalAlignment="Bottom">
                 <Grid VerticalAlignment="Bottom" Margin="0,0,0,5">
                     <CheckBox x:Name="SavePassword" IsTabStop="False" Content="비밀번호 저장" ToolTip="공용 컴퓨터에서는 사용하지 마세요!" HorizontalAlignment="Left"/>
-
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                        <RadioButton x:Name="DC_Moogle" IsTabStop="False" Content="모그리" ToolTip="오딘, 가루다, 알테마, 라무, 만드라고라" IsChecked="True" Margin="0,0,5,0"/>
-                        <RadioButton x:Name="DC_Chocobo" IsTabStop="False" Content="초코보" ToolTip="사보텐더, 시바, 베히모스, 리바이어선, 길가메시"/>
-                    </StackPanel>
                 </Grid>
 
                 <Button x:Name="ProcessBtn" TabIndex="4" Content="게임 시작" VerticalAlignment="Bottom" Height="50" Click="ProcessBtn_Click"/>

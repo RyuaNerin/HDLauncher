@@ -59,8 +59,6 @@ namespace HDLauncher
                 SavePassword.IsChecked = true;
             }
 
-            DC_Chocobo.IsChecked = Settings.DataCenter == Settings.DataCenters.Chocobo;
-
             await LoadRecaptcha(true);
 
             EventManager.RegisterClassHandler(typeof(TextBox),
@@ -108,7 +106,6 @@ namespace HDLauncher
                 Settings.Password = "";
                 Settings.SavePassword = false;
             }
-            Settings.DataCenter = (DC_Moogle.IsChecked == true) ? Settings.DataCenters.Moogle : Settings.DataCenters.Chocobo;
             Settings.Save();
 
             MainGrid.IsEnabled = false;
@@ -261,21 +258,8 @@ namespace HDLauncher
 
                     ShowInformation("게임 시작!");
 
-                    string lobbyHost, gmHost;
-
-                    if (DC_Moogle.IsChecked == true)
-                    {
-                        lobbyHost = Constants.MOOGLE_LOBBY_HOST;
-                        gmHost = Constants.MOOGLE_GM_HOST;
-                    }
-                    else
-                    {
-                        lobbyHost = Constants.CHOCOBO_LOBBY_HOST;
-                        gmHost = Constants.CHOCOBO_GM_HOST;
-                    }
-
                     string token = tokenMatch.Groups[1].Value;
-                    string commandLine = string.Format(Constants.COMMAND_LINE, lobbyHost, Constants.LOBBY_TCP_PORT, gmHost, token, Constants.RESET_CONFIG);
+                    string commandLine = string.Format(Constants.COMMAND_LINE, Constants.LOBBY_TCP_PORT, token, Constants.RESET_CONFIG);
 
                     string ffxivPath = Path.Combine(Settings.FFXIVPath, !Settings.DX11 ? Constants.FFXIV_PROGRAM_PATH : Constants.FFXIV_PROGRAM_PATH_DX11);
 

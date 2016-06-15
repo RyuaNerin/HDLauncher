@@ -37,15 +37,9 @@ namespace HDLauncher
         public const int LOBBY_TCP_PORT = 54994;
         public const int RESET_CONFIG = 0;
 
-        public const string MOOGLE_LOBBY_HOST = "lobbyf-live.ff14.co.kr";
-        public const string MOOGLE_GM_HOST = "gm-live.ff14.co.kr";
-
-        public const string CHOCOBO_LOBBY_HOST = "lobbyf-live2.ff14.co.kr";
-        public const string CHOCOBO_GM_HOST = "gm-live2.ff14.co.kr";
-
         public const string FFXIV_PROGRAM_PATH = @"game\ffxiv.exe";
         public const string FFXIV_PROGRAM_PATH_DX11 = @"game\ffxiv_dx11.exe";
-        public const string COMMAND_LINE = @"DEV.LobbyHost01={0} DEV.LobbyPort01={1} DEV.GMServerHost={2} DEV.TestSID={3} SYS.resetConfig={4}";
+        public const string COMMAND_LINE = @"DEV.LobbyHost01=lobbyf-live.ff14.co.kr DEV.LobbyPort01={0} DEV.GMServerHost=gm-live.ff14.co.kr DEV.TestSID={1} SYS.resetConfig={2}";
 
         public const string UPDATE_BASE_URL = @"http://hdlauncher.devunt.kr";
         public const string UPDATE_VERCHECK_URL = @"/version.txt";
